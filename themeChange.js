@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
     const themeButton = document.getElementById('themeButton');
     const navbar = document.querySelector('.navbar');
-    const navbarBrand = document.querySelector('.navbar-brand');
-    const cards = document.querySelectorAll('.card');
     const logo = document.getElementById('logo');
+    const FOM = document.querySelectorAll('.FOM');
+
 
     // Set page to current theme
     let currentTheme = localStorage.getItem("currentTheme");
@@ -41,14 +41,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
         navbar.classList.remove('light');
         navbar.classList.add('navbar-dark', 'dark');
+
+        FOM.classList.remove('light');
+        FOM.classList.add('dark');
         
         logo.src = "images/logoDark.svg";
-
-        cards.forEach(card => {
-            card.classList.remove('light');
-            card.classList.add('dark');
-        });
-
     }
 
     function setLight() {
@@ -62,12 +59,10 @@ document.addEventListener('DOMContentLoaded', function() {
         navbar.classList.remove('navbar-dark', 'dark');
         navbar.classList.add('light');
         
-        logo.src = "images/logoLight.svg";
+        FOM.classList.remove('dark');
+        FOM.classList.add('light');
 
-        cards.forEach(card => {
-            card.classList.remove('dark');
-            card.classList.add('light');
-        });
+        logo.src = "images/logoLight.svg";
     }
 
 });
