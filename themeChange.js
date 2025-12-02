@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const navbar = document.querySelector('.navbar');
     const navbarBrand = document.querySelector('.navbar-brand');
     const cards = document.querySelectorAll('.card');
+    const logo = document.getElementById('logo');
 
     // Set page to current theme
     let currentTheme = localStorage.getItem("currentTheme");
@@ -40,8 +41,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
         navbar.classList.remove('light');
         navbar.classList.add('navbar-dark', 'dark');
-        navbarBrand.classList.remove('light');
-        navbarBrand.classList.add('dark');
+        
+        logo.src = "images/logoDark.svg";
 
         cards.forEach(card => {
             card.classList.remove('light');
@@ -60,8 +61,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
         navbar.classList.remove('navbar-dark', 'dark');
         navbar.classList.add('light');
-        navbarBrand.classList.remove('dark');
-        navbarBrand.classList.add('light');
+        
+        logo.src = "images/logoLight.svg";
 
         cards.forEach(card => {
             card.classList.remove('dark');
