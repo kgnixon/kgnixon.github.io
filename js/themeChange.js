@@ -4,10 +4,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const logo = document.getElementById('logo');
     const header = document.querySelector(".header");
     const footer = document.querySelector(".footer");
-    const next = document.getElementById("next");
-    const prev = document.getElementById("prev");
     const links = document.querySelectorAll('a');
     const arrows = document.querySelectorAll('.arrow');
+
+    const next = document.getElementById("next");
+    const prev = document.getElementById("prev");
+
 
     // Set page to current theme
     let currentTheme = localStorage.getItem("currentTheme");
@@ -38,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function setDark() {
         themeButton.classList.remove('btn-light');
         themeButton.classList.add('btn-dark');
-        themeIcon.src = "images/lightMode.svg";
+        themeIcon.src = "images/icons/lightMode.svg";
 
         document.body.classList.remove('body-light');
         document.body.classList.add('body-dark');
@@ -55,33 +57,34 @@ document.addEventListener('DOMContentLoaded', function() {
         //     logo.classList.remove('fadeout');
         // }, 1000);
 
-        logo.src = "images/logoDark.svg";
-        
-        next.classList.remove('btn-light');
-        next.classList.add('btn-dark');
-        
-        prev.classList.remove('btn-light');
-        prev.classList.add('btn-dark');
+        logo.src = "images/icons/logoDark.svg";
 
         links.forEach(link => {
             link.classList.remove('a-light');
             link.classList.add('a-dark');
         });
-
+        
         arrows.forEach(arrow => {
             arrow.classList.add('fadeout');
             setTimeout(() => {
-                arrow.src = "images/arrowDark.svg";
+                arrow.src = "images/icons/arrowDark.svg";
                 arrow.classList.remove('fadeout');
             }, 600);
         });
+
+        if (next) {
+            next.classList.remove('btn-light');
+            next.classList.add('btn-dark');
         
-    }
+            prev.classList.remove('btn-light');
+            prev.classList.add('btn-dark');
+        };
+    };
 
     function setLight() {
         themeButton.classList.remove('btn-dark');
         themeButton.classList.add('btn-light');
-        themeIcon.src = "images/darkMode.svg";
+        themeIcon.src = "images/icons/darkMode.svg";
 
         document.body.classList.remove('body-dark');
         document.body.classList.add('body-light');
@@ -98,13 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
         //     logo.classList.remove('fadeout');
         // }, 1000);
 
-        logo.src = "images/logoLight.svg";
-
-        next.classList.remove('btn-dark');
-        next.classList.add('btn-light');
-        
-        prev.classList.remove('btn-dark');
-        prev.classList.add('btn-light');
+        logo.src = "images/icons/logoLight.svg";
 
         links.forEach(link => {
             link.classList.remove('a-dark');
@@ -114,11 +111,18 @@ document.addEventListener('DOMContentLoaded', function() {
         arrows.forEach(arrow => {
             arrow.classList.add('fadeout');
             setTimeout(() => {
-                arrow.src = "images/arrowLight.svg";
+                arrow.src = "images/icons/arrowLight.svg";
                 arrow.classList.remove('fadeout');
             }, 600);
         });
 
-    }
+        if (next) {
+            next.classList.remove('btn-dark');
+            next.classList.add('btn-light');
+            
+            prev.classList.remove('btn-dark');
+            prev.classList.add('btn-light');
+        };
+    };
 
 });

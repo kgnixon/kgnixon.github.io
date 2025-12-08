@@ -75,6 +75,24 @@ body {
     object-fit: cover;
 }
 
+.gallery {
+    display: flex;
+    justify-content: center;
+}
+
+.gallery img,
+.gallery video {
+    max-width: 15vw;
+    aspect-ratio: 3 / 4;
+    margin: 20px;
+    object-fit: cover;
+}
+
+.gallery img.wide {
+    max-width: 30vw;
+    aspect-ratio: 3 / 2;
+}
+
 h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 60px;
@@ -94,6 +112,12 @@ skills {
     font-weight: 200;
     line-height: 1.5;
     /* margin-bottom: 8px; */
+}
+
+.content-text {
+    font-family: Andale Mono, monospace;
+    font-size: 1.2rem;
+    max-width: max(50vw, 500px)
 }
 
 img {

@@ -6,8 +6,12 @@ document.addEventListener('DOMContentLoaded', function() {
   const slide = document.querySelector(".slide");
   const indicator = document.querySelectorAll(".indicator");
   
-  let index = 0;
-  // let index = localStorage.getItem("currentIndex");
+  // let index = 0;
+  let index = localStorage.getItem("currentIndex");
+
+  if (!index) {
+    let index = 0;
+  };
 
   function moveSlider() {
     const slideWidth = slide.offsetWidth;
@@ -19,6 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
       index = 0;
     }
 
+    localStorage.setItem('currentIndex', index);
     container.style.transform = `translateX(-${index * slideWidth}px)`;
   }
 
@@ -48,6 +53,8 @@ document.addEventListener('DOMContentLoaded', function() {
       updateIndicators();
     });
   });
+
+  updateIndicators();
 
   window.addEventListener("resize", moveSlider);
   window.addEventListener("load", moveSlider);

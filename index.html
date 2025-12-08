@@ -2,44 +2,44 @@
 
 <html lang="en">
     <head>
+        <!-- Script for Light/Dark mode button -->
+        <script src="js/themeChange.js"></script>
+        
         <!-- Include compatability for mobile devices -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Import bootstrap -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
-        <!-- Link css stylesheet -->
-        <link href="css/styles.css" rel="stylesheet">        
-
-        <title>Koji Nixon - Engineering Portfolio</title>
-
-        <!-- Script for Light/Dark mode button -->
-        <script src="js/themeChange.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>   
 
         <!-- Script for slider -->
         <script src="js/slider.js"></script>
-
+        
+        <!-- Link css stylesheet -->
+        <link href="css/styles.css" rel="stylesheet">
+        
         <!-- Favicon -->
-        <link rel="icon" type="image/svg+xml" href="images/logoLight.svg">
+        <link rel="icon" type="image/svg+xml" href="images/icons/logoLight.svg">
+
+        <title>Koji Nixon - Portfolio</title>
 
     </head>
     
-    <body class="body-light">
+    <body class="">
 
         <!-- Header -->
-        <div class="header header-light" style="display: flex; align-items: center;">
+        <div class="header" style="display: flex; align-items: center;">
             <!-- Logo -->
             <div style="margin: 15px">
                 <a href="/">
-                    <img id="logo" src="images/logoLight.svg" alt="Logo">
+                    <img id="logo" src="images/icons/logoLight.svg" alt="Logo">
                 </a>
             </div>
             <!-- Theme button -->
             <div>
                 <button type="button" class="btn" id="themeButton">
-                    <img id="themeIcon" src="images/darkMode.svg" alt="Theme icon">
+                    <img id="themeIcon" src="" alt="Theme icon">
                 </button>
             </div>
         </div>
@@ -56,21 +56,21 @@
                     ENGINEERING PORTFOLIO
                 </h2>                 
                 
-                <a href="#myprojects" style="scroll-behavior: smooth; align-items: center; display: flex; margin: 0 20px;">
+                <a href="#myprojects" style="scroll-behavior: smooth; display: flex; align-items: center; margin: 0 20px;">
                     <strong style="margin: 0 5px">
                         VIEW MY PROJECTS
                     </strong>    
                     
-                    <img src="images/arrowDark.svg" class="arrow down" style="height: 15px; width: 15px;">
+                    <img src="" class="arrow down" style="height: 15px; width: 15px;">
                 </a>
             </div>
         </div>
 
-        <div class="container" style="max-width: 50vw;">
-            <h3>
+        <div class="container content-text">
+            <h3 style="font-family: Andale Mono, monospace;">
                 Welcome
             </h3>
-            <p>
+            <p style="font-size: 1.4rem;">
                 Thank you for clicking on my portfolio. I am proud to have designed and built this by myself however,
                 it is still a work in progress. As such, some features, especially the responsiveness of this
                 website, are not fully polished. For the best experience, please view this portfolio using fullscreen
@@ -91,21 +91,21 @@
             <div class="slide-container">
 
                 <div class="slide" style="justify-content: center;">
-                    <img src="images/GundamBackpack.jpg" alt="Gundam Backpack">
+                    <img src="images/gb/main.jpg" alt="Gundam Backpack">
                     <div class="container" style="max-width: 500px; margin: 5px">
                         <h4>
                             <strong>
-                                GUNDAM INSPIRED BACKPACK
+                                GUNDAM BACKPACK
                             </strong>
                             
                         </h4>
                         <skills>
-                            Conceptual Design & Development / Fusion 360 CAD / DFM
+                            Fusion 360 CAD / DFM
                         </skills>
-                        <p style="margin-top: 8px">
-                            Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat.
-                            In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla
-                            lacus nec metus bibendum egestas.
+                        <p class="content-text" style="margin-top: 8px;">
+                            My latest project working at Turbulence Creative where I developed a client's design
+                            for a backpack with a strong Gundam inspiration. Using my CAD skills, the backpack was
+                            eventually manufactured and ...
                         </p>
                         <a href="gundambackpack.html">
                             <strong>
@@ -116,7 +116,7 @@
                 </div>
 
                 <div class="slide" style="justify-content: center;">
-                    <img src="images/dress.webp" alt="Mars Rover">
+                    <img src="images/phb/wwd.webp" alt="Perfect Human Being dress">
                     <div class="container" style="max-width: 500px; margin: 5px">
                         <h4>
                             <strong>
@@ -125,7 +125,7 @@
                             
                         </h4>
                         <skills>
-                            Conceptual Design & Development / Fusion 360 CAD / DFM 
+                            Conceptual Design / Fusion 360 CAD / DFM 
                         </skills>
                         <p style="margin-top: 8px">
                             Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat.
@@ -141,7 +141,7 @@
                 </div>
 
                 <div class="slide" style="justify-content: center;">
-                    <img src="images/sscollection.jpg" alt="Bracelet">
+                    <img src="images/ss/braceleton.jpg" alt="Bracelet">
                     <div class="container" style="max-width: 500px; margin: 5px">
                         <h4>
                             <strong>
@@ -150,7 +150,7 @@
                             
                         </h4>
                         <skills>
-                            Conceptual Design & Development / Fusion 360 CAD / DFM 
+                            Conceptual Design / Fusion 360 CAD / DFM 
                         </skills>
                         <p style="margin-top: 8px">
                             Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat.
@@ -166,7 +166,7 @@
                 </div>
 
                 <div class="slide" style="justify-content: center;">
-                    <img src="images/fypfinal.jpg" alt="Animatronic Nightjar">
+                    <img src="images/fyp/fypfinal.jpg" alt="Animatronic Nightjar">
                     <div class="container" style="max-width: 500px; margin: 5px">
                         <h4>
                             <strong>
@@ -175,14 +175,14 @@
                             
                         </h4>
                         <skills>
-                            Conceptual Design & Development / SolidWorks CAD  / Manufacturing / Code Simulation & Testing
+                            Conceptual Design / SolidWorks CAD  / Manufacturing / Simulation & Testing
                         </skills>
                         <p style="margin-top: 8px">
                             Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat.
                             In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla
                             lacus nec metus bibendum egestas.
                         </p>
-                        <a href="fyp.html">
+                        <a href="nightjar.html">
                             <strong>
                                 FIND OUT MORE
                             </strong>
@@ -191,7 +191,7 @@
                 </div>
 
                 <div class="slide" style="justify-content: center;">
-                    <img src="images/marRover.jpg" alt="Mars Rover">
+                    <img src="images/mr/fullarm1.jpg" alt="Mars Rover">
                     <div class="container" style="max-width: 500px; margin: 5px">
                         <h4>
                             <strong>
@@ -200,7 +200,7 @@
                             
                         </h4>
                         <skills>
-                            Conceptual Design & Development / Fast Prototyping / SolidWorks CAD / Manufacturing 
+                            Conceptual Design / Fast Prototyping / SolidWorks CAD / Manufacturing 
                         </skills>
                         <p style="margin-top: 8px">
                             Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat.
@@ -220,7 +220,7 @@
 
         <div class="container" style="display: flex; justify-content: center; align-items: center; margin-top: 20px;">
             <button class="btn" id="prev">
-                <img src="images/arrowLight.svg" class="arrow flip" alt="Left arrow">
+                <img src="" class="arrow flip" alt="Left arrow">
             </button>
             
             <button class="indicator btn active" id="0"></button>
@@ -230,7 +230,7 @@
             <button class="indicator btn" id="4"></button>
 
             <button class="btn" id="next">
-                <img src="images/arrowLight.svg" class="arrow" alt="Right arrow">
+                <img src="" class="arrow" alt="Right arrow">
             </button>
         </div>
     </body>
@@ -240,9 +240,9 @@
             <p style="margin: 15px">
                 © 2025 | Built and designed by Koji Nixon
             </p>
-            <a href="www.linkedin.com/in/kojinixon" style="margin: 15px">
+            <a href="https://www.linkedin.com/in/kojinixon" style="margin: 15px">
                 www.linkedin.com/in/kojinixon
-                <img src="images/linkedin.svg" alt="LinkedIn" width="30" height="30" style="margin-left: 15px;">    
+                <img src="images/icons/linkedin.svg" alt="LinkedIn" width="30" height="30" style="margin-left: 15px;">    
             </a>
         </div>
     </footer>
