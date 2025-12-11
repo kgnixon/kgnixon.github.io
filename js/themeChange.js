@@ -51,13 +51,13 @@ document.addEventListener('DOMContentLoaded', function() {
         footer.classList.remove('footer-light');
         footer.classList.add('footer-dark');
 
-        // logo.classList.add('fadeout');
-        // setTimeout(() => {
-        //     logo.src = "images/logoDark.svg";
-        //     logo.classList.remove('fadeout');
-        // }, 1000);
+        logo.classList.add('fadeout');
+        setTimeout(() => {
+            logo.src = "images/icons/logoDark.svg";
+            logo.classList.remove('fadeout');
+        }, 600);
 
-        logo.src = "images/icons/logoDark.svg";
+        // logo.src = "images/icons/logoDark.svg";
 
         links.forEach(link => {
             link.classList.remove('a-light');
@@ -95,13 +95,13 @@ document.addEventListener('DOMContentLoaded', function() {
         footer.classList.remove('footer-dark');
         footer.classList.add('footer-light');
 
-        // logo.classList.add('fadeout');
-        // setTimeout(() => {
-        //     logo.src = "images/logoLight.svg";
-        //     logo.classList.remove('fadeout');
-        // }, 1000);
+        logo.classList.add('fadeout');
+        setTimeout(() => {
+            logo.src = "images/icons/logoLight.svg";
+            logo.classList.remove('fadeout');
+        }, 600);
 
-        logo.src = "images/icons/logoLight.svg";
+        // logo.src = "images/icons/logoLight.svg";
 
         links.forEach(link => {
             link.classList.remove('a-dark');
