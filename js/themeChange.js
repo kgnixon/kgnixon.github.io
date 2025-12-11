@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+    
     const themeButton = document.getElementById('themeButton');
     const themeIcon = document.getElementById('themeIcon');
     const logo = document.getElementById('logo');
@@ -6,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const footer = document.querySelector(".footer");
     const links = document.querySelectorAll('a');
     const arrows = document.querySelectorAll('.arrow');
-
     const next = document.getElementById("next");
     const prev = document.getElementById("prev");
 
@@ -55,9 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(() => {
             logo.src = "images/icons/logoDark.svg";
             logo.classList.remove('fadeout');
-        }, 600);
-
-        // logo.src = "images/icons/logoDark.svg";
+        }, 500);
 
         links.forEach(link => {
             link.classList.remove('a-light');
@@ -69,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
             setTimeout(() => {
                 arrow.src = "images/icons/arrowDark.svg";
                 arrow.classList.remove('fadeout');
-            }, 600);
+            }, 500);
         });
 
         if (next) {
@@ -99,9 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(() => {
             logo.src = "images/icons/logoLight.svg";
             logo.classList.remove('fadeout');
-        }, 600);
-
-        // logo.src = "images/icons/logoLight.svg";
+        }, 500);
 
         links.forEach(link => {
             link.classList.remove('a-dark');
@@ -113,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function() {
             setTimeout(() => {
                 arrow.src = "images/icons/arrowLight.svg";
                 arrow.classList.remove('fadeout');
-            }, 600);
+            }, 500);
         });
 
         if (next) {
