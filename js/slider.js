@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+    
     const container = document.querySelector(".slide-container");
     const next = document.getElementById("next");
     const prev = document.getElementById("prev");
